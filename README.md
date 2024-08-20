@@ -26,31 +26,27 @@
 
     <h3>Education</h3>
 
-    <p>
-      <strong>The Ohio State University, </strong>
+    <ul>
+      <li><strong><strong>The Ohio State University, </strong>
       <strong>Columbus, Ohio</strong><br>
       Ph.D. in Agricultural, Environmental, and Development Economics<br>
       Aug.2020 - May.2025 (expected)<br>
       Committee: H. Allen Klaiber (Chair), Sathya Gopalakrishnan, Elena Irwin, Yao Wang<br>
-      Dissertation title: Essays on the spatial spillover effect of land development program
-    </p>
+      Dissertation title: Essays on the spatial spillover effect of land development program</li>
 
-    <p>
-      <strong>Colorado State University, </strong>
+      <li><strong>Colorado State University, </strong>
       <strong>Fort Collins, Colorado</strong><br>
       BS in Ecosystem Science and Sustainability<br>
       BA in Economics<br>
       Sep.2018 – May.2020<br>
-      Honors Undergraduate Program Scholar
-    </p>
+      Honors Undergraduate Program Scholar</li>
 
-    <p>
-      <strong>East China Normal University, </strong>
+      <li><strong>East China Normal University, </strong>
       <strong>Shanghai, China</strong><br>
       BS in Ecology<br>
       Sep. 2015 – Jul. 2020<br>
-      Awards: First Class Scholarship (2016-2017), University-level Outstanding Students (2016-2017), National Scholarship (2015-2016), University-level Outstanding Students (2015-2016)
-    </p>
+      Awards: First Class Scholarship (2016-2017), University-level Outstanding Students (2016-2017), National Scholarship (2015-2016), University-level Outstanding Students (2015-2016)</li>
+    </ul>
 
     <h3>Projects and Work</h3>
     
