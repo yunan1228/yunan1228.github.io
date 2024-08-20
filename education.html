@@ -6,38 +6,88 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 50px auto; /* Added space at the top */
+            padding: 0 20px;
         }
         .nav {
             margin-top: 20px;
+            text-align: center;
         }
         .nav a {
             margin: 0 10px;
             text-decoration: none;
             color: blue;
         }
+        .education-entry {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .education-entry img {
+            width: 80px; /* Set a fixed size for the logos */
+            height: auto;
+            margin-right: 20px;
+        }
+        .education-details {
+            flex: 1;
+        }
+        .education-details strong {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .education-details p {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Education</h1>
-        <ul>
-            <li><strong>The Ohio State University</strong>, Columbus, Ohio</li>
-            Ph.D. in Agricultural, Environmental, and Development Economics<br>
-            Aug. 2020 - May. 2025 (expected)<br>
-            <br>
-            <li><strong>Colorado State University</strong>, Fort Collins, Colorado</li>
-            BS in Ecosystem Science and Sustainability<br>
-            BA in Economics<br>
-            Sep. 2018 – May. 2020<br>
-            <br>
-            <li><strong>East China Normal University</strong>, Shanghai, China</li>
-            BS in Ecology<br>
-            Sep. 2015 – Jul. 2020<br>
-        </ul>
+        
+        <!-- Education Entry 1 -->
+        <div class="education-entry">
+            <img src="OSU.png" alt="OSU Logo">
+            <div class="education-details">
+                <strong>The Ohio State University</strong>
+                <p>Columbus, Ohio</p>
+                <p>Ph.D. in Agricultural, Environmental, and Development Economics</p>
+                <p>Aug. 2020 - May. 2025 (expected)</p>
+                <p>Committee: H. Allen Klaiber (Chair), Sathya Gopalakrishnan, Elena Irwin, Yao Wang</p>
+                <p>Dissertation title: Essays on the spatial spillover effect of land development program</p>
+            </div>
+        </div>
+        
+        <!-- Education Entry 2 -->
+        <div class="education-entry">
+            <img src="CSU.png" alt="CSU Logo">
+            <div class="education-details">
+                <strong>Colorado State University</strong>
+                <p>Fort Collins, Colorado</p>
+                <p>BS in Ecosystem Science and Sustainability</p>
+                <p>BA in Economics</p>
+                <p>Sep. 2018 – May. 2020</p>
+                <p>Honors Undergraduate Program Scholar</p>
+            </div>
+        </div>
+        
+        <!-- Education Entry 3 -->
+        <div class="education-entry">
+            <img src="ECNU.png" alt="ECNU Logo">
+            <div class="education-details">
+                <strong>East China Normal University</strong>
+                <p>Shanghai, China</p>
+                <p>BS in Ecology</p>
+                <p>Sep. 2015 – Jul. 2020</p>
+                <p>Awards: First Class Scholarship (2016-2017), University-level Outstanding Students (2016-2017), National Scholarship (2015-2016), University-level Outstanding Students (2015-2016)</p>
+            </div>
+        </div>
+
         <div class="nav">
             <a href="index.html">About Me</a>
             <a href="work.html">Work Experience</a>
