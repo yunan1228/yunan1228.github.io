@@ -15,7 +15,6 @@
   
   <!-- Right side: Description taking 70% of the width with a gap between sections -->
   <div style="flex: 70%; padding-left: 40px;">
-    <h2>About Me</h2>
   
     <h1>Welcome to My Personal Website 👋</h1>
   
