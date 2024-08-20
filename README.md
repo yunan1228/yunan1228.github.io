@@ -39,7 +39,7 @@
     <p>You can reach me at:</p>
     <ul>
       <li>Email: <a href="mailto:zhu.2904@osu.edu">zhu.2904@osu.edu</a></li>
-      <li>GitHub: <a href="https://github.com/yunan1228">@yunan1228</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/yunan-anny-zhu-15aa30179/">Yunan(Anny) Zhu</a></li>
     </ul>
   </div>
 </div>
