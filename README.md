@@ -38,8 +38,6 @@
             <a href="project.html">Projects</a>
             <a href="hobby.html">Hobbies</a>
         </div>
-    </div>
-</body>
-</html>
+
 
 
