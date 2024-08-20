@@ -1,8 +1,8 @@
-<div style="display: flex; align-items: flex-start;">
-  <!-- Left side: Picture taking 30% of the width -->
-  <div style="flex: 30%; padding-right: 20px;">
-    <img src="picture.jpeg" alt="Your Picture" style="width: 100%; border-radius: 10px;" />
-    <p style="text-align: center;"><strong>Yunan (Anny) Zhu</strong><br>Ohio State University, AEDE</p>
+<div style="display: flex; align-items: center;">
+  <!-- Left side: Picture taking 30% of the width, centered content -->
+  <div style="flex: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <img src="picture.jpeg" alt="Your Picture" style="width: 80%; border-radius: 50%;" />
+    <p style="text-align: center; margin-top: 15px;"><strong>Yunan (Anny) Zhu</strong><br>Ohio State University, AEDE</p>
   </div>
   
   <!-- Right side: Description taking 70% of the width -->
