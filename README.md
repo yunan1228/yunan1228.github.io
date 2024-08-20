@@ -24,6 +24,34 @@
   
     <p>I am passionate about <strong>regional and urban economics</strong>, and I love working on projects related to housing markets, dynamic equilibrium, and demographic changes. In my free time, I enjoy playing badminton.</p>
 
+    <h3>Education</h3>
+
+    <p>
+      <strong>The Ohio State University</strong>
+      <strong>Columbus, Ohio</strong><br>
+      <em>Ph.D. in Agricultural, Environmental, and Development Economics</em> 
+      2020-2025 (expected)<br>
+      Committee: H. Allen Klaiber (Chair), Sathya Gopalakrishnan, Elena Irwin, Yao Wang<br>
+      Dissertation title: Essays on the spatial spillover effect of land development program
+    </p>
+
+    <p>
+      <strong>Colorado State University</strong>
+      <strong>Fort Collins, Colorado</strong><br>
+      <em>BS in Ecosystem Science and Sustainability</em><br>
+      <em>BA in Economics</em><br>
+      Sep. 2018 – May. 2020<br>
+      Honors Undergraduate Program Scholar
+    </p>
+
+    <p>
+      <strong>East China Normal University</strong>
+      <strong>Shanghai, China</strong><br>
+      <em>BS in Ecology</em><br>
+      Sep. 2015 – Jul. 2020<br>
+      Awards: First Class Scholarship (2016-2017), University-level Outstanding Students (2016-2017), National Scholarship (2015-2016), University-level Outstanding Students (2015-2016)
+    </p>
+
     <h3>Projects and Work</h3>
     
     <ul>
