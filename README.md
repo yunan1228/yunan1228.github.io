@@ -1,14 +1,14 @@
 <div style="display: flex; align-items: flex-start;">
   <!-- Left side: Picture and details taking 30% of the width, centered content -->
   <div style="flex: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-right: 40px;">
-    <img src="picture.jpeg" alt="Your Picture" style="width: 80%; border-radius: 50%;" />
+    <img src="picture.jpeg" alt="Your Picture" style="width: 80%; border-radius: 50%; margin-top: 50px;" />
     <p style="text-align: center; margin-top: 15px;">
       <strong>Yunan (Anny) Zhu</strong><br>
       Fifth Year PhD<br>
       Agricultural, Environmental, and Development Economics<br>
-      The Ohio State University<br>
       227 Agricultural Administration Bldg.,<br>
-      2120 Fyffe Rd., Columbus, OH 43210<br>
+      2120 Fyffe Rd.,<br>
+      Columbus, OH 43210<br>
       <a href="mailto:zhu.2904@osu.edu">zhu.2904@osu.edu</a>
     </p>
   </div>
@@ -38,7 +38,7 @@
     <p>You can reach me at:</p>
     <ul>
       <li>Email: <a href="mailto:zhu.2904@osu.edu">zhu.2904@osu.edu</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/yunan-anny-zhu-15aa30179/">Yunan(Anny) Zhu</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/yunan-anny-zhu-15aa30179/">Yunan Zhu</a></li>
     </ul>
   </div>
 </div>
