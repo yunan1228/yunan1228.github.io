@@ -1,12 +1,20 @@
-<div style="display: flex; align-items: center;">
-  <!-- Left side: Picture taking 30% of the width, centered content -->
-  <div style="flex: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+<div style="display: flex; align-items: flex-start;">
+  <!-- Left side: Picture and details taking 30% of the width, centered content -->
+  <div style="flex: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-right: 40px;">
     <img src="picture.jpeg" alt="Your Picture" style="width: 80%; border-radius: 50%;" />
-    <p style="text-align: center; margin-top: 15px;"><strong>Yunan (Anny) Zhu</strong><br>Ohio State University, AEDE</p>
+    <p style="text-align: center; margin-top: 15px;">
+      <strong>Yunan (Anny) Zhu</strong><br>
+      Fifth Year PhD<br>
+      Agricultural, Environmental, and Development Economics<br>
+      The Ohio State University<br>
+      227 Agricultural Administration Bldg.,<br>
+      2120 Fyffe Rd., Columbus, OH 43210<br>
+      <a href="mailto:zhu.2904@osu.edu">zhu.2904@osu.edu</a>
+    </p>
   </div>
   
-  <!-- Right side: Description taking 70% of the width -->
-  <div style="flex: 70%;">
+  <!-- Right side: Description taking 70% of the width with a gap between sections -->
+  <div style="flex: 70%; padding-left: 40px;">
     <h2>About Me</h2>
   
     <h1>Welcome to My Personal Website 👋</h1>
