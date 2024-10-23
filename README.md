@@ -35,7 +35,7 @@
         <p>Hello! I'm Yunan (Anny) Zhu, a fifth-year PhD student at Ohio State University. Welcome to my personal website!</p>
         <div class="nav">
             <a href="index.html">About Me</a>
-            <a href="Yunan_Zhu_CV.pdf" target="_blank">CV</a> <!-- Link to your CV -->
+            <a href="Yunan_Zhu_CV_new.pdf" target="_blank">CV</a> <!-- Link to your CV -->
             <a href="education.html">Education</a>
             <a href="project.html">Projects</a>
             <a href="hobby.html">Hobbies</a>
