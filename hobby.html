@@ -1,88 +1,163 @@
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yunan (Anny) Zhu - Hobbies</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            text-align: left;
-        }
-        p {
-            font-size: 18px;
-            margin-bottom: 40px;
-            text-align: left;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 50px;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .nav {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: blue;
-            font-size: 18px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yunan (Anny) Zhu — Hobbies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --ink:#1f2937;
+      --muted:#64748b;
+      --link:#2563eb;
+      --link-hover:#1e40af;
+      --accent:#0ea5e9;
+      --accent-2:#6366f1;
+      --ring:rgba(99,102,241,.25);
+      --shadow: 0 10px 25px rgba(2,6,23,.06), 0 2px 8px rgba(2,6,23,.04);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family:'Poppins', sans-serif;
+      margin:0; padding:0; color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(99,102,241,.08), transparent 60%),
+        radial-gradient(900px 500px at 110% 10%, rgba(14,165,233,.08), transparent 60%),
+        var(--bg);
+    }
+
+    /* Header */
+    .hero{
+      background: linear-gradient(135deg, rgba(14,165,233,.18), rgba(99,102,241,.18));
+      border-bottom:1px solid rgba(99,102,241,.15);
+    }
+    .hero-inner{
+      max-width:1024px; margin:0 auto; padding:48px 20px 36px;
+      display:flex; align-items:center; gap:18px;
+    }
+    .avatar{
+      width:64px; height:64px; border-radius:50%;
+      background: linear-gradient(135deg, #fff, #eef2ff);
+      border:1px solid rgba(99,102,241,.2);
+      box-shadow: var(--shadow);
+      display:grid; place-items:center; font-size:28px;
+    }
+    .hero h1{ margin:0; font-size:clamp(26px,3vw,32px); letter-spacing:.2px; }
+    .hero p{ margin:.25rem 0 0; color:var(--muted); font-size:15px; }
+
+    /* Nav */
+    .nav{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+    .nav a{
+      text-decoration:none; color:var(--link); font-weight:600; font-size:14px;
+      background:#fff; border:1px solid rgba(2,6,23,.06);
+      padding:8px 12px; border-radius:999px; box-shadow:var(--shadow);
+      transition: transform .15s ease, box-shadow .2s ease, color .15s ease, border-color .15s ease;
+    }
+    .nav a:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 12px 28px rgba(2,6,23,.08), 0 3px 10px rgba(2,6,23,.06);
+      color:var(--link-hover);
+      border-color: rgba(99,102,241,.25);
+    }
+
+    /* Container */
+    .container{ max-width:1024px; margin:24px auto 64px; padding:0 20px; }
+
+    .section-title{ display:flex; align-items:center; gap:10px; margin:24px 0 20px; }
+    .section-title h2{ margin:0; font-size:clamp(22px,2.6vw,26px); }
+    .section-title .rule{ flex:1; height:1px; background: linear-gradient(90deg, rgba(99,102,241,.35), transparent); }
+
+    /* Cards */
+    .card{
+      background:var(--card);
+      border:1px solid rgba(2,6,23,.06);
+      border-radius:var(--radius);
+      padding:18px; box-shadow:var(--shadow);
+      margin-bottom:20px;
+      transition: transform .18s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(2,6,23,.10), 0 6px 18px rgba(2,6,23,.06);
+      border-color: rgba(99,102,241,.22);
+    }
+    .card p{ margin:.25rem 0; color:#374151; font-size:15px; line-height:1.6; }
+
+    /* Gallery */
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+      gap:15px; margin-top:20px;
+    }
+    .gallery img{
+      width:100%; height:auto; border-radius:12px;
+      box-shadow:0 6px 12px rgba(2,6,23,.15);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .gallery img:hover{
+      transform:scale(1.03);
+      box-shadow:0 12px 22px rgba(2,6,23,.20);
+    }
+    footer{height:24px;}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>My Hobbies</h1>
-        <p>I am passionate about cooking and playing badminton in my spare time. Cooking allows me to explore my creativity and discover new flavors and recipes from different cultures. I enjoy experimenting with ingredients and trying out both traditional and modern dishes. There's something truly satisfying about preparing a meal from scratch and sharing it with friends and family. It brings people together and gives me a sense of accomplishment.</p>
-        <p>In addition to cooking, I find joy and relaxation in playing badminton. It is not only a great way to stay active, but it also helps me sharpen my reflexes and improve my mental focus. I enjoy the fast-paced nature of the game, the strategic thinking it requires, and the camaraderie that comes with playing. Whether it's a friendly match or a more competitive game, badminton always helps me unwind and keeps me motivated to stay fit.</p>
-        <p>Below are some photos showcasing my love for both cooking and badminton:</p>
-
-        <!-- Gallery of Hobbies -->
-        <div class="gallery">
-            <!-- Cooking Pictures -->
-            <img src="c1.jpg" alt="Cooking Image 1">
-            <img src="c2.jpg" alt="Cooking Image 2">
-            <img src="c3.jpg" alt="Cooking Image 3">
-            <img src="c4.jpg" alt="Cooking Image 4">
-            <img src="c5.jpg" alt="Cooking Image 5">
-            <img src="c6.jpg" alt="Cooking Image 6">
-
-            <!-- Badminton Pictures -->
-            <img src="b1.jpg" alt="Badminton Image 1">
-            <img src="b2.jpg" alt="Badminton Image 2">
-            <img src="b3.jpg" alt="Badminton Image 3">
-            <img src="b4.jpg" alt="Badminton Image 4">
-            <img src="b5.jpg" alt="Badminton Image 5">
-            <img src="b6.jpg" alt="Badminton Image 6">
-        </div>
-
-        <!-- Navigation Links -->
-        <div class="nav">
-            <a href="index.html">About Me</a>
-            <a href="Yunan_Zhu_CV.pdf" target="_blank">CV</a> <!-- Link to your CV -->
-            <a href="education.html">Education</a>
-            <a href="project.html">Projects</a>
-            <a href="hobby.html">Hobbies</a>
-        </div>
+  <!-- Header -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="avatar" aria-hidden="true">🎨</div>
+      <div>
+        <h1>Hobbies — Yunan (Anny) Zhu</h1>
+        <p>Cooking • Badminton • Creativity & balance</p>
+        <nav class="nav">
+          <a href="index.html">About</a>
+          <a href="Yunan_Zhu_CV.pdf" target="_blank">CV</a>
+          <a href="education.html">Education</a>
+          <a href="project.html">Projects</a>
+          <a href="hobby.html" aria-current="page">Hobbies</a>
+        </nav>
+      </div>
     </div>
+  </header>
+
+  <!-- Content -->
+  <main class="container">
+    <div class="section-title">
+      <h2>My Hobbies</h2>
+      <div class="rule"></div>
+    </div>
+
+    <article class="card">
+      <p>
+        I am passionate about cooking and playing badminton in my spare time. Cooking allows me to explore creativity and discover flavors from different cultures. I enjoy experimenting with ingredients and preparing both traditional and modern dishes. Sharing meals with friends and family brings people together and gives me a sense of accomplishment.
+      </p>
+      <p>
+        In addition to cooking, I find joy and relaxation in playing badminton. It is not only a way to stay active, but also helps sharpen reflexes and improve focus. The fast-paced nature of the game, the strategic thinking it requires, and the camaraderie make badminton a rewarding pursuit. Whether in friendly or competitive matches, it always helps me unwind and stay motivated.
+      </p>
+      <p>Below are some photos showcasing my love for both cooking and badminton:</p>
+    </article>
+
+    <!-- Gallery -->
+    <div class="gallery">
+      <img src="c1.jpg" alt="Cooking Image 1">
+      <img src="c2.jpg" alt="Cooking Image 2">
+      <img src="c3.jpg" alt="Cooking Image 3">
+      <img src="c4.jpg" alt="Cooking Image 4">
+      <img src="c5.jpg" alt="Cooking Image 5">
+      <img src="c6.jpg" alt="Cooking Image 6">
+      <img src="b1.jpg" alt="Badminton Image 1">
+      <img src="b2.jpg" alt="Badminton Image 2">
+      <img src="b3.jpg" alt="Badminton Image 3">
+      <img src="b4.jpg" alt="Badminton Image 4">
+      <img src="b5.jpg" alt="Badminton Image 5">
+      <img src="b6.jpg" alt="Badminton Image 6">
+    </div>
+  </main>
+
+  <footer></footer>
 </body>
 </html>
+
