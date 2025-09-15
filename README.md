@@ -27,9 +27,10 @@
     <div class="container">
         <img src="picture.jpeg" alt="Your Picture" style="width: 30%; border-radius: 50%; margin-top: 50px;" />
         <h1>Yunan (Anny) Zhu</h1>
-        <p>Center for Meteorological Impact and Risk Research, Chinese Academy of Meteorological Sciences,<br>
+        <p>Center for Meteorological Impact and Risk Research, <br>
+        Chinese Academy of Meteorological Sciences,<br>
         Beijing, China, 100081<br>
-        <a href="mailto:zhu.2904@osu.edu">zhu.2904@osu.edu</a>
+        <a href="mailto:zhuyunan@cma.gov.cn">zhuyunan@cma.gov.cn</a>
         <p>Hello! I'm Yunan (Anny) Zhu, an Assistant Research Fellow at Chinese Academy of Meteorological Sciences. Welcome to my personal website!</p>
         <div class="nav">
             <a href="index.html">About Me</a>
