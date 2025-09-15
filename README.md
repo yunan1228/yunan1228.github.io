@@ -27,12 +27,10 @@
     <div class="container">
         <img src="picture.jpeg" alt="Your Picture" style="width: 30%; border-radius: 50%; margin-top: 50px;" />
         <h1>Yunan (Anny) Zhu</h1>
-        <p>Fifth Year PhD<br>
-        Agricultural, Environmental, and Development Economics<br>
-        227 Agricultural Administration Bldg.,<br>
-        2120 Fyffe Rd., Columbus, OH 43210<br>
+        <p>Center for Meteorological Impact and Risk Research, Chinese Academy of Meteorological Sciences,<br>
+        Beijing, China, 100081<br>
         <a href="mailto:zhu.2904@osu.edu">zhu.2904@osu.edu</a>
-        <p>Hello! I'm Yunan (Anny) Zhu, a fifth-year PhD student at Ohio State University. Welcome to my personal website!</p>
+        <p>Hello! I'm Yunan (Anny) Zhu, an Assistant Research Fellow at Chinese Academy of Meteorological Sciences. Welcome to my personal website!</p>
         <div class="nav">
             <a href="index.html">About Me</a>
             <a href="Yunan_Zhu_CV_new.pdf" target="_blank">CV</a> <!-- Link to your CV -->
