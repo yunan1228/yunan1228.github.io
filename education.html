@@ -74,12 +74,12 @@
     .section-title h2{ margin:0; font-size:clamp(22px,2.6vw,26px); }
     .section-title .rule{ flex:1; height:1px; background: linear-gradient(90deg, rgba(99,102,241,.35), transparent); }
 
+   
     /* Education grid */
     .grid{
-      display:grid; grid-template-columns:1fr; gap:18px;
-    }
-    @media (min-width: 760px){
-      .grid{ grid-template-columns: 1fr 1fr; }
+      display:grid;
+      grid-template-columns: 1fr;  /* Always single column */
+      gap:18px;
     }
 
     /* Card */
