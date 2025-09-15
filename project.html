@@ -1,106 +1,280 @@
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yunan (Anny) Zhu - Projects</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto; /* Added space at the top */
-            padding: 0 20px;
-        }
-        .nav {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: blue;
-        }
-        .project-entry {
-            margin-bottom: 30px; /* Space between project entries */
-        }
-        .project-details strong {
-            font-size: 18px;
-            display: block;
-            margin-bottom: 10px;
-        }
-        .project-details p {
-            margin: 5px 0;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yunan (Anny) Zhu — Projects</title>
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --ink:#1f2937;
+      --muted:#64748b;
+      --link:#2563eb;
+      --link-hover:#1e40af;
+      --accent:#0ea5e9;
+      --accent-2:#6366f1;
+      --ring:rgba(99,102,241,.25);
+      --shadow: 0 10px 25px rgba(2,6,23,.06), 0 2px 8px rgba(2,6,23,.04);
+      --radius:16px;
+    }
+    /* Base */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      font-family: Arial, sans-serif;
+      margin:0; padding:0;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(99,102,241,.08), transparent 60%),
+        radial-gradient(900px 500px at 110% 10%, rgba(14,165,233,.08), transparent 60%),
+        var(--bg);
+    }
+
+    /* Header */
+    .hero{
+      background: linear-gradient(135deg, rgba(14,165,233,.18), rgba(99,102,241,.18));
+      border-bottom: 1px solid rgba(99,102,241,.15);
+    }
+    .hero-inner{
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 48px 20px 36px;
+      display:flex;
+      align-items:center;
+      gap: 18px;
+    }
+    .avatar{
+      width:64px; height:64px; border-radius:50%;
+      background: linear-gradient(135deg, #fff, #eef2ff);
+      border: 1px solid rgba(99,102,241,.2);
+      box-shadow: var(--shadow);
+      display:grid; place-items:center;
+      font-size:28px;
+    }
+    .hero h1{
+      margin:0;
+      font-size: clamp(26px, 3vw, 32px);
+      letter-spacing:.2px;
+    }
+    .hero p{
+      margin:.25rem 0 0;
+      color:var(--muted);
+      font-size: 15px;
+    }
+
+    /* Nav */
+    .nav{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:14px;
+    }
+    .nav a{
+      text-decoration:none;
+      color:var(--link);
+      font-weight:600; font-size:14px;
+      background:#fff;
+      border:1px solid rgba(2,6,23,.06);
+      padding:8px 12px; border-radius:999px;
+      box-shadow: var(--shadow);
+      transition: transform .15s ease, box-shadow .2s ease, color .15s ease, border-color .15s ease;
+    }
+    .nav a:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 12px 28px rgba(2,6,23,.08), 0 3px 10px rgba(2,6,23,.06);
+      color:var(--link-hover);
+      border-color: rgba(99,102,241,.25);
+    }
+
+    /* Container */
+    .container{
+      max-width: 1024px;
+      margin: 24px auto 64px;
+      padding: 0 20px;
+    }
+
+    /* Section title underline */
+    .section-title{
+      display:flex; align-items:center; gap:10px;
+      margin: 24px 0 20px;
+    }
+    .section-title h2{
+      margin:0;
+      font-size: clamp(22px, 2.6vw, 26px);
+    }
+    .section-title .rule{
+      flex:1; height:1px; background: linear-gradient(90deg, rgba(99,102,241,.35), transparent);
+    }
+
+    /* Projects grid */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    @media (min-width: 760px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    /* Project card */
+    .card{
+      background: var(--card);
+      border:1px solid rgba(2,6,23,.06);
+      border-radius: var(--radius);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow);
+      transition: transform .18s ease, box-shadow .2s ease, border-color .2s ease;
+      position:relative;
+      overflow:hidden;
+    }
+    .card::after{
+      content:"";
+      position:absolute; inset:auto -40% -40% auto; width:180px; height:180px;
+      background: radial-gradient(closest-side, rgba(99,102,241,.10), transparent 70%);
+      transform: rotate(25deg);
+      pointer-events:none;
+    }
+    .card:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(2,6,23,.10), 0 6px 18px rgba(2,6,23,.06);
+      border-color: rgba(99,102,241,.22);
+    }
+
+    .card h3{
+      margin: 0 0 8px;
+      font-size: 18px;
+      line-height:1.35;
+    }
+    .meta{
+      display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+      color:var(--muted); font-size:13px; margin-bottom:10px;
+    }
+    .pill{
+      background: linear-gradient(135deg, rgba(99,102,241,.12), rgba(14,165,233,.10));
+      border:1px solid rgba(99,102,241,.25);
+      color:#374151;
+      padding:4px 8px; border-radius:999px; font-weight:600; font-size:12px;
+    }
+    .card p{
+      margin:0; color:#374151; line-height:1.55; font-size:15px;
+    }
+    .actions{
+      margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      text-decoration:none; font-weight:700; font-size:14px;
+      color:#0f172a; background:#f8fafc;
+      border:1px solid rgba(2,6,23,.08);
+      padding:8px 12px; border-radius:12px;
+      transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      background:#ffffff;
+      border-color: var(--ring);
+      box-shadow: 0 10px 24px rgba(99,102,241,.12);
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(14,165,233,.16), rgba(99,102,241,.16));
+      border-color: rgba(99,102,241,.35);
+    }
+
+    /* Footer spacing */
+    footer{ height: 24px; }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Projects</h1>
-        
-        <ul>
-            <li>
-                <div class="project-entry">
-                    <div class="project-details">
-                        <strong>The Spatial Spillover Effect of Land Development Program on Nearby Home Values</strong>
-                        <p>This study evaluates the impact of the Columbus, OH land bank program on neighboring housing prices since 2010 using a hedonic model. 
-                            It investigates the effects of land bank acquisitions and redevelopment (garden vs. non-garden) on nearby property values at varying 
-                            time scales and distances. The findings show a positive long-term spillover effect and a preference for open spaces, highlighting the
-                            land bank program's role in stabilizing neighborhoods and enhancing property values in urban areas.</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="project-entry">
-                    <div class="project-details">
-                        <strong>The Impact of WWII Bombings on Urban Redevelopment: A Spatial and Temporal Analysis of Residential Properties in Vienna, Austria</strong>
-                        <p>This study examines the long-term effects of WWII bombings on urban redevelopment and property ownership in Vienna, Austria. 
-                            Using parcel-level data and nearest neighbor matching, we assess the impact of bombing on building height, ownership patterns, 
-                            and private ownership. The findings reveal significant post-war increases in building height, fragmented ownership, and private 
-                            ownership in bombed areas. Additionally, we explore redevelopment trends using building permits, uncovering a relationship between 
-                            bombing, property characteristics, and redevelopment dynamics.</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="project-entry">
-                    <div class="project-details">
-                        <strong>The Impact of Land Bank Programs on Neighborhood Foreclosure Risks</strong>
-                        <a href="Foreclosed_JMP.pdf" target="_blank">(Job Market Paper - Draft)</a>
-                        <p>This study uses a discrete-time duration model to evaluate the impact of land bank acquisitions on foreclosure risk in Columbus, Ohio. 
-                            Findings show that land bank interventions reduce foreclosure likelihood in the short term, particularly for nearby properties, though 
-                            the effect diminishes over time and distance. Housing characteristics like price, property age, and loan-to-value ratios also influence 
-                            outcomes. The study underscores the importance of land banks in neighborhood stabilization and highlights the need for sustained interventions 
-                            to support long-term recovery.</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="project-entry">
-                    <div class="project-details">
-                        <strong>Barriers to Adaptation: Satellite Evidence of Crop Progress Adjustments in China</strong>
-                        <p>This study explores the impact of climate change on agriculture in China, focusing on how crop progress adjusts to changing conditions. 
-                            Using advanced machine learning to integrate satellite-derived NDVI data with ground observations, the researchers create a high-resolution 
-                            dataset to estimate crop growth stages. The analysis reveals significant regional differences in adaptation to temperature changes and highlights 
-                            how proximity to agro-meteorological stations affects farmers' ability to adjust. The study emphasizes that information access is critical for 
-                            enhancing agricultural resilience, suggesting the need for targeted policies to support adaptation in China's diverse agricultural regions.</p>
-                    </div>
-                </div>
-            </li>
-        </ul>
-
-        <!-- Navigation Links -->
-        <div class="nav">
-            <a href="index.html">About Me</a>
-            <a href="Yunan_Zhu_CV.pdf" target="_blank">CV</a> <!-- Link to your CV -->
-            <a href="education.html">Education</a>
-            <a href="project.html">Projects</a>
-            <a href="hobby.html">Hobbies</a>
-        </div>
+  <!-- Header -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="avatar" aria-hidden="true">📚</div>
+      <div>
+        <h1>Projects — Yunan (Anny) Zhu</h1>
+        <p>Spatial economics • Urban policy • Environmental & development economics</p>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">About</a>
+          <a href="Yunan_Zhu_CV.pdf" target="_blank" rel="noopener">CV</a>
+          <a href="education.html">Education</a>
+          <a href="project.html" aria-current="page">Projects</a>
+          <a href="hobby.html">Hobbies</a>
+        </nav>
+      </div>
     </div>
-</body>
-</html>
+  </header>
+
+  <!-- Content -->
+  <main class="container">
+    <div class="section-title">
+      <h2>Featured Research</h2>
+      <div class="rule"></div>
+    </div>
+
+    <section class="grid" aria-label="Projects list">
+      <!-- Project 1 -->
+      <article class="card">
+        <div class="meta">
+          <span class="pill">Urban Economics</span>
+          <span class="pill">Hedonic</span>
+          <span class="pill">Spatial</span>
+        </div>
+        <h3>The Spatial Spillover Effect of Land Development Program on Nearby Home Values</h3>
+        <p>
+          This study evaluates the impact of the Columbus, OH land bank program on neighboring housing prices since 2010 using a hedonic model.
+          It differentiates acquisitions by redevelopment type (garden vs. non-garden) and estimates effects at multiple time scales and distances.
+          Findings indicate a positive long-run spillover and a revealed preference for open space, highlighting the program’s role in neighborhood stabilization.
+        </p>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="card">
+        <div class="meta">
+          <span class="pill">Economic History</span>
+          <span class="pill">Causal Inference</span>
+          <span class="pill">GIS</span>
+        </div>
+        <h3>The Impact of WWII Bombings on Urban Redevelopment: Vienna, Austria</h3>
+        <p>
+          Using parcel-level records and nearest-neighbor matching, this project studies the long-term effects of WWII bombings on building height,
+          ownership patterns, and redevelopment dynamics in Vienna. Results show persistent increases in height and fragmented ownership in bombed areas,
+          alongside distinct post-war redevelopment trajectories.
+        </p>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="card">
+        <div class="meta">
+          <span class="pill">Job Market Paper</span>
+          <span class="pill">DID / CSDID</span>
+          <span class="pill">Neighborhoods</span>
+        </div>
+        <h3>The Impact of Land Bank Programs on Neighborhood Foreclosure Risks</h3>
+        <p>
+          A discrete-time duration model shows that land bank acquisitions reduce foreclosure likelihood in the short run—especially for nearby properties—
+          with effects attenuating over time and distance. Housing characteristics (price, age, LTV) also shape outcomes, underscoring the need for sustained
+          interventions for durable recovery.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="Foreclosed_JMP.pdf" target="_blank" rel="noopener">Open JMP (Draft)</a>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="card">
+        <div class="meta">
+          <span class="pill">Climate</span>
+          <span class="pill">Remote Sensing</span>
+          <span class="pill">ML</span>
+        </div>
+        <h3>Barriers to Adaptation: Satellite Evidence of Crop Progress Adjustments in China</h3>
+        <p>
+          We integrate satellite-derived NDVI with ground observations via ML to estimate crop growth stages at high spatial detail.
+          Results reveal heterogeneous adaptation to temperature shifts and the central role of information access—proxied by proximity to agro-meteorological stations—
+          in enabling agricultural resilience.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer></footer>
 </body>
 </html>
