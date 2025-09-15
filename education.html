@@ -1,102 +1,210 @@
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yunan (Anny) Zhu - Education</title>
-    <style>
-        body, h1, h2, h3, h4, h5, h6, p, a, strong {
-            font-family: Arial, sans-serif;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto; /* Added space at the top */
-            padding: 0 20px;
-        }
-        .nav {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: blue;
-        }
-        .education-entry {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-        .education-entry img {
-            width: 80px; /* Set a fixed size for the logos */
-            height: auto;
-            margin-right: 20px;
-        }
-        .education-details {
-            flex: 1;
-        }
-        .education-details strong {
-            font-size: 18px;
-            display: block;
-            margin-bottom: 5px;
-        }
-        .education-details p {
-            margin: 5px 0;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yunan (Anny) Zhu — Education</title>
+  <!-- Modern, attractive font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --ink:#1f2937;
+      --muted:#64748b;
+      --link:#2563eb;
+      --link-hover:#1e40af;
+      --accent:#0ea5e9;
+      --accent-2:#6366f1;
+      --ring:rgba(99,102,241,.25);
+      --shadow: 0 10px 25px rgba(2,6,23,.06), 0 2px 8px rgba(2,6,23,.04);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      font-family:'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin:0; padding:0; color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(99,102,241,.08), transparent 60%),
+        radial-gradient(900px 500px at 110% 10%, rgba(14,165,233,.08), transparent 60%),
+        var(--bg);
+    }
+
+    /* Header */
+    .hero{
+      background: linear-gradient(135deg, rgba(14,165,233,.18), rgba(99,102,241,.18));
+      border-bottom:1px solid rgba(99,102,241,.15);
+    }
+    .hero-inner{
+      max-width:1024px; margin:0 auto; padding:48px 20px 36px;
+      display:flex; align-items:center; gap:18px;
+    }
+    .avatar{
+      width:64px; height:64px; border-radius:50%;
+      background: linear-gradient(135deg, #fff, #eef2ff);
+      border:1px solid rgba(99,102,241,.2);
+      box-shadow: var(--shadow);
+      display:grid; place-items:center; font-size:28px;
+    }
+    .hero h1{ margin:0; font-size:clamp(26px,3vw,32px); letter-spacing:.2px; }
+    .hero p{ margin:.25rem 0 0; color:var(--muted); font-size:15px; }
+
+    /* Nav */
+    .nav{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+    .nav a{
+      text-decoration:none; color:var(--link); font-weight:600; font-size:14px;
+      background:#fff; border:1px solid rgba(2,6,23,.06);
+      padding:8px 12px; border-radius:999px; box-shadow:var(--shadow);
+      transition: transform .15s ease, box-shadow .2s ease, color .15s ease, border-color .15s ease;
+    }
+    .nav a:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 12px 28px rgba(2,6,23,.08), 0 3px 10px rgba(2,6,23,.06);
+      color:var(--link-hover);
+      border-color: rgba(99,102,241,.25);
+    }
+
+    /* Container */
+    .container{ max-width:1024px; margin:24px auto 64px; padding:0 20px; }
+
+    .section-title{
+      display:flex; align-items:center; gap:10px; margin:24px 0 20px;
+    }
+    .section-title h2{ margin:0; font-size:clamp(22px,2.6vw,26px); }
+    .section-title .rule{ flex:1; height:1px; background: linear-gradient(90deg, rgba(99,102,241,.35), transparent); }
+
+    /* Education grid */
+    .grid{
+      display:grid; grid-template-columns:1fr; gap:18px;
+    }
+    @media (min-width: 760px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    /* Card */
+    .card{
+      background:var(--card);
+      border:1px solid rgba(2,6,23,.06);
+      border-radius:var(--radius);
+      padding:18px; box-shadow:var(--shadow);
+      transition: transform .18s ease, box-shadow .2s ease, border-color .2s ease;
+      position:relative; overflow:hidden; display:flex; gap:16px; align-items:flex-start;
+    }
+    .card::after{
+      content:""; position:absolute; inset:auto -40% -40% auto; width:180px; height:180px;
+      background: radial-gradient(closest-side, rgba(99,102,241,.10), transparent 70%);
+      transform: rotate(25deg); pointer-events:none;
+    }
+    .card:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(2,6,23,.10), 0 6px 18px rgba(2,6,23,.06);
+      border-color: rgba(99,102,241,.22);
+    }
+
+    .logo{
+      width:64px; height:64px; border-radius:12px; flex:0 0 auto; object-fit:cover;
+      border:1px solid rgba(2,6,23,.08); background:#fff;
+    }
+    .edu-body{ flex:1 1 auto; min-width:0; }
+    .edu-head{
+      display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:6px;
+    }
+    .edu-head h3{ margin:0; font-size:18px; line-height:1.35; }
+    .meta{
+      color:var(--muted); font-size:13px; white-space:nowrap;
+    }
+    .pill{
+      display:inline-block; margin:6px 0 8px;
+      background: linear-gradient(135deg, rgba(99,102,241,.12), rgba(14,165,233,.10));
+      border:1px solid rgba(99,102,241,.25);
+      color:#374151; padding:4px 8px; border-radius:999px; font-weight:600; font-size:12px;
+    }
+    .edu-body p{ margin:.18rem 0; color:#374151; font-size:15px; line-height:1.55; }
+    .list{ margin:.12rem 0; padding-left:18px; }
+    .list li{ margin:.12rem 0; }
+
+    /* Footer spacer */
+    footer{ height:24px; }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Education</h1>
-        
-        <!-- Education Entry 1 -->
-        <div class="education-entry">
-            <img src="OSU.jpg" alt="OSU Logo">
-            <div class="education-details">
-                <strong>The Ohio State University</strong>
-                <p>Columbus, Ohio</p>
-                <p>Ph.D. in Agricultural, Environmental, and Development Economics</p>
-                <p>Aug. 2020 - May. 2025</p>
-                <p>Committee: H. Allen Klaiber (Chair), Sathya Gopalakrishnan, Elena Irwin, Yao Wang</p>
-                <p>Dissertation title: Essays on the spatial spillover effect of land development program</p>
-            </div>
-        </div>
-        
-        <!-- Education Entry 2 -->
-        <div class="education-entry">
-            <img src="CSU.png" alt="CSU Logo">
-            <div class="education-details">
-                <strong>Colorado State University</strong>
-                <p>Fort Collins, Colorado</p>
-                <p>BS in Ecosystem Science and Sustainability</p>
-                <p>BA in Economics</p>
-                <p>Sep. 2018 – May. 2020</p>
-                <p>Honors Undergraduate Program Scholar</p>
-            </div>
-        </div>
-        
-        <!-- Education Entry 3 -->
-        <div class="education-entry">
-            <img src="ECNU.png" alt="ECNU Logo">
-            <div class="education-details">
-                <strong>East China Normal University</strong>
-                <p>Shanghai, China</p>
-                <p>BS in Ecology</p>
-                <p>Sep. 2015 – Jul. 2020</p>
-                <p>Awards: First Class Scholarship (2016-2017), University-level Outstanding Students (2016-2017), National Scholarship (2015-2016), University-level Outstanding Students (2015-2016)</p>
-            </div>
-        </div>
-
-        <div class="nav">
-            <a href="index.html">About Me</a>
-            <a href="Yunan_Zhu_CV.pdf" target="_blank">CV</a> <!-- Link to your CV -->
-            <a href="education.html">Education</a>
-            <a href="project.html">Projects</a>
-            <a href="hobby.html">Hobbies</a>
-        </div>
+  <!-- Header -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="avatar" aria-hidden="true">🎓</div>
+      <div>
+        <h1>Education — Yunan (Anny) Zhu</h1>
+        <p>Spatial economics • Urban policy • Environmental & development economics</p>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">About</a>
+          <a href="Yunan_Zhu_CV.pdf" target="_blank" rel="noopener">CV</a>
+          <a href="education.html" aria-current="page">Education</a>
+          <a href="project.html">Projects</a>
+          <a href="hobby.html">Hobbies</a>
+        </nav>
+      </div>
     </div>
+  </header>
+
+  <!-- Content -->
+  <main class="container">
+    <div class="section-title">
+      <h2>Degrees & Training</h2>
+      <div class="rule"></div>
+    </div>
+
+    <section class="grid" aria-label="Education list">
+      <!-- OSU -->
+      <article class="card">
+        <img src="OSU.jpg" alt="The Ohio State University logo" class="logo">
+        <div class="edu-body">
+          <div class="edu-head">
+            <h3>The Ohio State University</h3>
+            <div class="meta">Columbus, Ohio • Aug 2020 – May 2025</div>
+          </div>
+          <span class="pill">Ph.D. — Agricultural, Environmental & Development Economics</span>
+          <p><strong>Committee:</strong> H. Allen Klaiber (Chair), Sathya Gopalakrishnan, Elena Irwin, Yao Wang</p>
+          <p><strong>Dissertation:</strong> Essays on the Spatial Spillover Effect of Land Development Program</p>
+        </div>
+      </article>
+
+      <!-- CSU -->
+      <article class="card">
+        <img src="CSU.png" alt="Colorado State University logo" class="logo">
+        <div class="edu-body">
+          <div class="edu-head">
+            <h3>Colorado State University</h3>
+            <div class="meta">Fort Collins, Colorado • Sep 2018 – May 2020</div>
+          </div>
+          <span class="pill">B.S. — Ecosystem Science & Sustainability</span>
+          <span class="pill">B.A. — Economics</span>
+          <p>Honors Undergraduate Program Scholar</p>
+        </div>
+      </article>
+
+      <!-- ECNU -->
+      <article class="card">
+        <img src="ECNU.png" alt="East China Normal University logo" class="logo">
+        <div class="edu-body">
+          <div class="edu-head">
+            <h3>East China Normal University</h3>
+            <div class="meta">Shanghai, China • Sep 2015 – Jul 2020</div>
+          </div>
+          <span class="pill">B.S. — Ecology</span>
+          <p><strong>Awards:</strong></p>
+          <ul class="list">
+            <li>First Class Scholarship (2016–2017)</li>
+            <li>University-level Outstanding Students (2016–2017)</li>
+            <li>National Scholarship (2015–2016)</li>
+            <li>University-level Outstanding Students (2015–2016)</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer></footer>
 </body>
 </html>
+
